@@ -1,24 +1,38 @@
 import request from './request'
 
-export function getTopBanners(){
+// 获取轮播图数据
+export function getTopBanners() {
   return request({
-    url:"/banner"
+    url: "/banner"
   })
 }
-export function getHotRecommends(limit){
+
+// 获取热门推荐数据
+export function getHotRecommends(limit) {
   return request({
-    url:"/personalized",
-    params:{
-      limit 
+    url: "/personalized",
+    params: {
+      limit
     }
   })
 }
 
-export function getNewAlbums(limit){
+// 获取新碟上架数据
+export function getNewAlbums(limit) {
   return request({
-    url:"/top/album",
-    params:{
+    url: "/top/album",
+    params: {
       limit
+    }
+  })
+}
+
+// 获取榜单数据
+export function getTopList(idx) {
+  return request({
+    url: "/top/list",
+    params: {
+      idx
     }
   })
 }
