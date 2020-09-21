@@ -1,9 +1,30 @@
 import React, { memo } from 'react'
 
-export default memo(function MJDiscover() {
+import { dicoverMenu } from "@/common/local-data";
+
+import { DiscoverWrapper, TopMenu } from './style'
+import { NavLink } from 'react-router-dom';
+import { renderRoutes } from 'react-router-config'
+
+export default memo(function MJDiscover(props) {
+  
+  const { route } = props
   return (
-    <div>
-      <h2>MJDiscover</h2>
-    </div>
+    <DiscoverWrapper>
+      <div className="top">
+        <TopMenu className="wrap-v1">
+          {
+            dicoverMenu.map((item, index) => {
+              return (
+                <div className="item" key={item.title}>
+                  <NavLink exact to={item.link}>{item.title}</NavLink>
+                </div>
+              )
+            })
+          }
+        </TopMenu>
+      </div>
+      { renderRoutes(route.routes)}
+    </DiscoverWrapper>
   )
 })

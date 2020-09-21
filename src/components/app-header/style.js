@@ -49,7 +49,7 @@ export const HeaderLeft = styled.div`
           top: 18px;
         }
       }
-      &:hover a, a.active{
+      &:hover a, .active{
         text-decoration: none;
         background: #000;
         color: #fff;
