@@ -33,7 +33,7 @@ export const TopRankingTop = styled.div`
     }
   }
   .right-top {
-    padding: 25px 10px 0 10px;
+    padding: 26px 10px 0 12px;
     .title {
       font-weight: 700;
       font-size: 14px;
@@ -68,14 +68,14 @@ export const TopRankingTop = styled.div`
 export const TopRankingCenter = styled.div`
   margin-top: 20px;
   .item-list {
-    margin-left: 15px;
-    margin-right: 15px;
+    margin-left: 12px;
+    margin-right: 12px;
     height: 32px;
     display: flex;
     align-items: center;
     .index {
       display: block;
-      width: 35px;
+      width: 38px;
       height: 32px;
       line-height:32px;
       text-align: center;
@@ -86,14 +86,11 @@ export const TopRankingCenter = styled.div`
       color: #c10d0c;
     }
     .name {
-      flex: 1;
+      width: 170px;
     }
     .icon {
       width: 70px;
       display: none;
-    }
-    &:hover .icon{
-      display: block;
       .play {
         margin-right: 6px;
         background-position: -267px -268px;
@@ -115,7 +112,6 @@ export const TopRankingCenter = styled.div`
         }
       }
       .file-add {
-        margin-right: 6px;
         background-position: -297px -268px;
         width: 17px;
         height: 17px;
@@ -123,6 +119,14 @@ export const TopRankingCenter = styled.div`
         &:hover {
           background-position: -297px -288px;
         }
+      }
+    }
+    &:hover {
+      .icon{
+        display: block;
+      }
+      .name {
+        width: 96px;
       }
     }
   }

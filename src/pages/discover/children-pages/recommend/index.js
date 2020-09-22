@@ -4,6 +4,9 @@ import MJTopBanner from './children-cpns/top-banner'
 import MJHotRecommend from './children-cpns/hot-recommend'
 import MJNewAlbum from './children-cpns/new-album'
 import MJRanking from './children-cpns/ranking'
+import MJUseLogin from './children-cpns/use-login'
+import MJSellteSinger from './children-cpns/sellte-singer'
+import MJHotRadio from './children-cpns/hot-radio'
 import {
   RecommendWrapper,
   Content,
@@ -23,7 +26,11 @@ function MJRecommend(props) {
           <MJNewAlbum />
           <MJRanking />
         </RecommendLeft>
-        <RecommendRight></RecommendRight>
+        <RecommendRight>
+          <MJUseLogin />
+          <MJSellteSinger />
+          <MJHotRadio />
+        </RecommendRight>
       </Content>
     </RecommendWrapper>
   )

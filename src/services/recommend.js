@@ -36,3 +36,13 @@ export function getTopList(idx) {
     }
   })
 }
+
+// 获取入驻歌手数据
+export function getSellteSinger(limit){
+  return request({
+    url:"/artist/list",
+    params:{
+      limit
+    }
+  })
+}

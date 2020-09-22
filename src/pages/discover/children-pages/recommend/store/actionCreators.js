@@ -3,7 +3,8 @@ import {
   getTopBanners,
   getHotRecommends,
   getNewAlbums,
-  getTopList
+  getTopList,
+  getSellteSinger
 } from '@/services/recommend'
 
 const changeTopBannerAction = (res) => ({
@@ -35,6 +36,10 @@ const changeOriginRankingAction = (res) => ({
   originRanking: res.playlist
 })
 
+const changeSellteSingerAction = (res) => ({
+  type:actionTypes.CHANGE_SELLTE_SINGER,
+  sellteSinger:res.artists
+})
 
 export const getTopBannerAction = () => {
   return dispatch => {
@@ -76,6 +81,14 @@ export const getTopListAction = (idx) => {
         default:
           break;
       }
+    })
+  }
+}
+
+export const getSellteSingerAction = (limit) => {
+  return dispatch => {
+    getSellteSinger(limit).then(res=>{
+      dispatch(changeSellteSingerAction(res))
     })
   }
 }

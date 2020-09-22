@@ -26,9 +26,9 @@ export default memo(function MJRanking() {
     <RankingWrapper>
       <MJThemeHeaderRCM title="榜单" />
       <div className="tops">
+        <MJTopRanking info={originRanking} />
         <MJTopRanking info={upRanking} />
         <MJTopRanking info={newRanking} />
-        <MJTopRanking info={originRanking} />
       </div>
     </RankingWrapper>
   )
