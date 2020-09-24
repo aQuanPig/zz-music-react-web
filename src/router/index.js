@@ -9,7 +9,7 @@ import MJSongs from '../pages/discover/children-pages/songs'
 import MJDjRadio from '../pages/discover/children-pages/djradio'
 import MJSinger from '../pages/discover/children-pages/singer'
 import MJAlbum from '../pages/discover/children-pages/album'
-
+import MJPlayer from '../pages/player'
 import { Redirect } from 'react-router-dom'
 const routes = [
   {
@@ -53,6 +53,10 @@ const routes = [
       {
         path: "/discover/album",
         component: MJAlbum
+      },
+      {
+        path:"/discover/player",
+        component:MJPlayer
       }
     ]
   },

@@ -8,7 +8,7 @@ import store from './store'
 
 import MJAppHeader from 'components/app-header'
 import MJAppFooter from 'components/app-footer'
-
+import MJPlayBar from './pages/player/app-play-bar'
 export default memo(function App() {
   return (
     <Provider store={store}>
@@ -16,6 +16,7 @@ export default memo(function App() {
         <MJAppHeader />
         {renderRoutes(routes)}
         <MJAppFooter />
+        <MJPlayBar/>
       </HashRouter>
     </Provider>
 
